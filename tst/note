@@ -1,0 +1,10 @@
+2015_02_10
+Chapter 3, Example 1 (Ref: Ch17)
+
+Create an Image file:
+kevin@Ubuntu:~/kernel/linux-0.11/tst/ch3/1$ bximage 
+
+#kevin@Ubuntu:~/kernel/linux-0.11/tst/ch3/1$ dd if=boot of=a.img bs=512 count=2880
+kevin@Ubuntu:~/kernel/linux-0.11/tst/ch3/1$ dd bs=32 if=boot of=a.img skip=1
+
+kevin@Ubuntu:~/kernel/linux-0.11/tst/ch3/1$ bochs -q -f bochsrc-fda.bxrc
